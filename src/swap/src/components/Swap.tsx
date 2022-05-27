@@ -218,7 +218,7 @@ function Bottomdiv(){
           fontWeight: 600,
           color:"#FFFFFF",
           marginLeft:2
-        }}>{anticipatedAmount}</Typography>
+        }}>{1/anticipatedAmount}</Typography>
         <TokenName mint={toMint} style={{ fontSize: 14, fontWeight: 600, color:"#FFFFFF",paddingLeft:0,marginLeft:0 }} />
         </div>
         <ImportExportRounded
