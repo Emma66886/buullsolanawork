@@ -11,7 +11,7 @@ export const PrimaryContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 
-  height: 100vh;
+  height: 150vh;
 `;
 
 const GlobalStyle = createGlobalStyle`

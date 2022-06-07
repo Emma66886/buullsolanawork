@@ -62,9 +62,9 @@ export const LandingP = styled.p`
 `;
 
 const Link = ({ className, children, href }) => (
-  <div href={href} className={className}>
+  <a href={href} className={className}>
     <p>{children}</p>
-  </div>
+  </a>
 );
 
 export const LandingBtn = styled(Link)`

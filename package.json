@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^2.2.0",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
     "@fontsource/poppins": "^4.5.8",
     "@project-serum/anchor": "^0.14.0",
     "@project-serum/serum": "^0.13.58",
@@ -14,6 +17,7 @@
     "@solana/wallet-adapter-react-ui": "^0.9.7",
     "@solana/wallet-adapter-wallets": "^0.16.1",
     "add": "^2.0.6",
+    "framer-motion": "6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",

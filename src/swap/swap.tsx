@@ -26,6 +26,7 @@ import {
 } from "@solana/spl-token-registry";
 // import Swap from "@project-serum/swap-ui";
 import Swap from './src/index'
+import { useMediaQuery } from '@chakra-ui/react'
 // import { bs58 } from '@project-serum/anchor/dist/utils/bytes';
 // import { Wallet } from './contexts/walletctx';
 export default function Swapui(){
@@ -46,6 +47,8 @@ const useStyles = makeStyles((theme) => ({
   }));
  
   function AppInner() {
+    const [isLargerThan501] = useMediaQuery('(min-width: 501px)')
+    const [isTallerThan640] = useMediaQuery('(min-height: 640px)')
     const styles = useStyles();
     const { enqueueSnackbar } = useSnackbar();
     const [tokenList, setTokenList] = useState<TokenListContainer | null>(null);
@@ -135,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
     const fromBullsolana = new PublicKey("9EKEh1CHMKmyvBTY6qYZm7kgRJE18tCbaY1ZbpdELbVr")
     const toUsdc = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v")
     const referr = new PublicKey("GDQQVvKbdJEX8fxc2DaoPW2WQoxUWHb68HNcxwEE6dae")
-const userPukey = connected ? wallet.publicKey.toBase58() : null;
+const userPukey = connected ? wallet.publicKey.toBase58() : null; 
     return (
       <div className={swapstyles.swapwrapper}>
         <WalletMultiButton className={swapstyles.swapbtn}>
@@ -143,7 +146,7 @@ const userPukey = connected ? wallet.publicKey.toBase58() : null;
         </WalletMultiButton>
         {tokenList 
         // &&provider 
-     && <Swap provider={provider} tokenList={tokenList} referral={referr}/>}
+     && <Swap provider={provider} tokenList={tokenList} referral={referr} containerStyle={{width:`${isLargerThan501 ? '450px':'80%'}`}}/>}
 </div>
     );
   }
