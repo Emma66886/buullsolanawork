@@ -146,7 +146,7 @@ const userPukey = connected ? wallet.publicKey.toBase58() : null;
         </WalletMultiButton>
         {tokenList 
         // &&provider 
-     && <Swap provider={provider} tokenList={tokenList} referral={referr} containerStyle={{width:`${isLargerThan501 ? '450px':'80%'}`}}/>}
+     && <Swap provider={provider} tokenList={tokenList} referral={referr} containerStyle={{width:`${isLargerThan501 ? '450px':'90%'}`}}/>}
 </div>
     );
   }
